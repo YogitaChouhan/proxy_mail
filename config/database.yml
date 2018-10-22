@@ -1,0 +1,21 @@
+default: &default
+ adapter: postgresql
+ encoding: unicode
+ database: proxy_mail_dev
+ pool: 5
+ username: postgres
+ password: 12345678
+ host: localhost
+
+development:
+ <<: *default
+ database: proxy_mail_dev
+
+production:
+ adapter: postgresql
+ encoding: unicode
+ database: proxy_mail_prod
+ pool: 5
+ username: postgres
+ password: 12345678
+ host: localhost

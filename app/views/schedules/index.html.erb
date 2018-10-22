@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Schedules List</h1>
+            <table border="1">
+              <tr>
+                <th>Date</th>
+                <th>City</th>
+                <th>State</th>
+                <th>From Time</th>
+                <th>End Time</th>
+              </tr>
+              <% @schedules.each do |shedule| %>
+              <tr>
+                <td><%= shedule.date %></td>
+                <td><%= shedule.city %></td>
+                <td><%= shedule.state %></td>
+                <td><%= shedule.from_time %></td>
+                <td><%= shedule.end_time %></td>
+                <!-- <%shedule.created_at.strftime("%I:00")%> -->
+                <% if (shedule.created_at >= Time.now - 24.hours) && (Time.now.wday >= 4) && (Time.now.to_time.strftime("%H").to_i < 12) %>
+                  <td><%= link_to 'edit', edit_schedule_path(shedule) %>
+                    <%= link_to 'Destroy', schedule_path(shedule), method: :delete, data: { confirm: 'Are you sure?' } %>
+                  </td>
+                <% end %>
+              </tr>
+              <% end %>
+            </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

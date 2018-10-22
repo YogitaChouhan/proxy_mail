@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <%# User.all.each do |user| %>
+      <%# @schedules = user.schedules %>
+      <h3><%#= user.email %>"yogita.yuvasoft@gmail.com"  Schedules List</h3>
+        <table border="1">
+          <tr>
+            <th>Date</th>
+            <th>City</th>
+            <th>State</th>
+            <th>From Time</th>
+            <th>End Time</th>
+          </tr>
+          <%# @schedules.each do |shedule| %>
+          <tr>
+            <td>Yogita<%#= shedule.date %></td>
+            <td>Indore<%#= shedule.city %></td>
+            <td>Madhya Pradesh<%#= shedule.state %></td>
+            <td>11AM<%#= shedule.from_time %></td>
+            <td>8PM<%#= shedule.end_time %></td>
+          </tr>
+          <%# end %>
+        </table>
+      <p>Thanks for joining and have a great day!</p>
+    <%# end %>
+  </body>
+</html>

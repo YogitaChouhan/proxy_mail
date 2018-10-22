@@ -1,0 +1,37 @@
+.forms-container {
+  background: #fff;
+  box-shadow: 0px 0px 5px #999;
+  padding:15px;
+  border-radius: 4px;
+  margin-top: 50px;
+}
+.forms-container input {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.forms-container input[type='checkbox'],
+.forms-container input[type='radio'] {
+  width: auto;
+  margin-right: 5px;
+  vertical-align: top;
+}
+.forms-container .check-label label {
+  width: auto;
+  vertical-align: top;
+}
+.forms-container h2{
+  margin: 0;
+  padding: 0 0 15px;
+}
+
+/****Custom Navbar Css*****/
+
+.navbar {
+  border-radius: 0;
+}
+.navbar-inverse .navbar-nav>li>a {
+  font-size: 18px;
+}
